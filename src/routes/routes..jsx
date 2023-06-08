@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 
+import Detail from '../components/Detail'
 import DefaultLayout from '../layout/DefaultLayout'
 import Home from '../pages/home'
 import Movies from '../pages/movies'
@@ -12,6 +13,7 @@ function Router() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/Movies" element={<Movies />}></Route>
         <Route path="/Series" element={<Series />}></Route>
+        <Route path="/Detalhes/:id" element={<Detail />}></Route>
       </Route>
     </Routes>
   )

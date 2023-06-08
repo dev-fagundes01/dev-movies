@@ -1,10 +1,18 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { ButtonMovie, ButtonTrailer } from '../../components/Button/styles'
 import Modal from '../../components/Modal'
 import Slider from '../../components/Slider'
-import api from '../../services/api'
-import { gerImagens } from '../../utils/getimagens'
+import {
+  getMovie,
+  getMovieUpcoming,
+  getSeriesUpcoming,
+  getTopMovies,
+  getTopPerson,
+  getTopSeries
+} from '../../services/getData'
+import { getImagens } from '../../utils/getimagens'
 import {
   DivBackground,
   DivButton,
@@ -21,63 +29,43 @@ function Home() {
   const [topPerson, setTopPerson] = useState()
   const [moviesUpcoming, setMovieUpcoming] = useState()
   const [seriesUpcoming, setSeriesUpcoming] = useState()
+  const navigate = useNavigate()
 
   useEffect(() => {
-    async function getMovies() {
-      const {
-        data: { results }
-      } = await api.get('/movie/popular')
-
-      setMovie(results[0])
-    }
-    async function getTopMovies() {
-      const {
-        data: { results }
-      } = await api.get('/movie/top_rated')
-
-      setTopMovies(results)
-    }
-    async function getTopSeries() {
-      const {
-        data: { results }
-      } = await api.get('/tv/top_rated')
-
-      setTopSeries(results)
-    }
-    async function getTopPerson() {
-      const {
-        data: { results }
-      } = await api.get('/person/popular')
-
-      setTopPerson(results)
-    }
-    async function getMovieUpcoming() {
-      const {
-        data: { results }
-      } = await api.get('/movie/upcoming')
-
-      setMovieUpcoming(results)
-    }
-    async function getSeriesUpcoming() {
-      const {
-        data: { results }
-      } = await api.get('/tv/on_the_air')
-
-      setSeriesUpcoming(results)
+    async function getAllData() {
+      Promise.all([
+        getMovie(),
+        getTopMovies(),
+        getTopSeries(),
+        getTopPerson(),
+        getMovieUpcoming(),
+        getSeriesUpcoming()
+      ]).then(
+        ([
+          Movie,
+          TopMovie,
+          TopSeries,
+          TopPerson,
+          MovieUpcoming,
+          SeriesUpcoming
+        ]) => {
+          setMovie(Movie)
+          setTopMovies(TopMovie)
+          setTopSeries(TopSeries)
+          setTopPerson(TopPerson)
+          setMovieUpcoming(MovieUpcoming)
+          setSeriesUpcoming(SeriesUpcoming)
+        }
+      )
     }
 
-    getMovies()
-    getTopMovies()
-    getTopSeries()
-    getTopPerson()
-    getMovieUpcoming()
-    getSeriesUpcoming()
+    getAllData()
   }, [])
 
   return (
     <>
       {movie && (
-        <DivBackground img={gerImagens(movie.backdrop_path)}>
+        <DivBackground img={getImagens(movie.backdrop_path)}>
           {showModal && (
             <Modal movieId={movie.id} setShowModal={setShowModal}></Modal>
           )}
@@ -86,7 +74,12 @@ function Home() {
               <h1>{movie.title}</h1>
               <p>{movie.overview}</p>
               <DivButton>
-                <ButtonMovie white={toString(false)}>Assista Agora</ButtonMovie>
+                <ButtonMovie
+                  white={toString(false)}
+                  onClick={() => navigate(`/Detalhes/${movie.id}`)}
+                >
+                  Assista Agora
+                </ButtonMovie>
                 <ButtonTrailer
                   white={toString(true)}
                   onClick={() => setShowModal(true)}
@@ -96,7 +89,7 @@ function Home() {
               </DivButton>
             </DivInfo>
             <DivPoster>
-              <img src={gerImagens(movie.poster_path)} alt="capa-do-filme" />
+              <img src={getImagens(movie.poster_path)} alt="capa-do-filme" />
             </DivPoster>
           </DivConteiner>
         </DivBackground>
