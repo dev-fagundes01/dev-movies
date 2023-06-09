@@ -39,7 +39,7 @@ export const DivDetail = styled.div`
   display: flex;
   height: 100%;
   max-width: 80vw;
-  margin-top: -200px;
+  margin-top: -280px;
   margin-bottom: 50px;
   gap: 35px;
 `
