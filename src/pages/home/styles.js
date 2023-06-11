@@ -34,11 +34,11 @@ export const DivInfo = styled.div`
   align-items: center;
   flex-direction: column;
   h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     color: white;
   }
   p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 60px;
     margin-bottom: 40px;
     color: white;
@@ -53,6 +53,6 @@ export const DivPoster = styled.div`
   z-index: 2;
   img {
     border-radius: 50px;
-    height: 100rem;
+    height: 60rem;
   }
 `

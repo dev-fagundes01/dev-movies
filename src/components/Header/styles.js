@@ -27,6 +27,7 @@ export const Li = styled.li`
   font-weight: 600;
   font-size: 50px;
   position: relative;
+  height: 70px;
   cursor: pointer;
   a {
     color: white;
@@ -39,7 +40,7 @@ export const Li = styled.li`
     width: ${(props) => (props.isActive ? '100%' : 0)};
     background: green;
     position: absolute;
-    bottom: 70px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     transition: width 0.5s ease-in-out;
