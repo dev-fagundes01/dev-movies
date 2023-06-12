@@ -1,5 +1,5 @@
 # dev-movies
-Link do projeto:https://dev-movies-df.netlify.app
+Link do projeto: https://dev-movies-df.netlify.app
 <br>
 <h2>Tenologias ultilizadas:</h2>
 <p>- HTML<p>
