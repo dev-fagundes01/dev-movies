@@ -11,8 +11,8 @@ function Router() {
     <Routes>
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/Movies" element={<Movies />}></Route>
-        <Route path="/Series" element={<Series />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
+        <Route path="/series" element={<Series />}></Route>
         <Route path="/Detalhes/:id" element={<Detail />}></Route>
       </Route>
     </Routes>
