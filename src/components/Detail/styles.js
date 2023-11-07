@@ -59,15 +59,17 @@ export const Cover = styled.div`
 `
 export const DivInfo = styled.div`
   z-index: 2;
-  width: 50vw;
   h1 {
-    font-size: 7rem;
-    color: white;
     display: flex;
     justify-content: center;
+    font-size: 7rem;
+    color: white;
   }
   p {
+    display: flex;
+    justify-content: center;
     font-size: 2.8rem;
+    width: 90%;
     color: white;
   }
 `

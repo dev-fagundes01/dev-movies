@@ -7,7 +7,7 @@ function Credits({ credits }) {
       <Title>Creditos</Title>
       {credits && (
         <Container>
-          {credits.slice(0, 10).map((artist) => (
+          {credits.slice(0, 12).map((artist) => (
             <DivCredits key={artist.id}>
               <img src={getImagens(artist.profile_path)} />
               <h4>{artist.original_name}</h4>

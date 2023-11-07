@@ -71,9 +71,7 @@ function Detail() {
             </div>
           </DivVideos>
         ))}
-      {movieSimilar && (
-        <Slider info={movieSimilar} title={'Filmes Similares'}></Slider>
-      )}
+      {movieSimilar && <Slider info={movieSimilar}></Slider>}
     </>
   )
 }

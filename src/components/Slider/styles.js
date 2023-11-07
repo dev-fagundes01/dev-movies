@@ -6,6 +6,7 @@ export const DivSlider = styled.div`
     font-size: 3rem;
     margin: 30px 15px;
   }
+
   .swiper-wrapper {
     display: flex;
   }

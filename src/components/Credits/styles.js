@@ -8,6 +8,8 @@ export const Title = styled.h3`
 export const Container = styled.div`
   display: flex;
   gap: 20px;
+  overflow-y: scroll;
+  width: 74vw;
 `
 
 export const DivCredits = styled.div`
