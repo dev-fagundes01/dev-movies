@@ -1,27 +1,9 @@
-import { useState, useEffect } from 'react'
-
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import Card from './Card'
 import { DivSlider } from './styles'
 
 function Slider({ info }) {
-  const [infoSlider, setInfoSlider] = useState()
-  useEffect(() => {
-    setInfoSlider(info)
-
-    if (infoSlider === undefined) {
-      const errorMessageElement = document.getElementById('error-message')
-      errorMessageElement.style.display = 'flex'
-      errorMessageElement.style.fontSize = '5rem'
-      errorMessageElement.style.color = 'red'
-      errorMessageElement.style.marginBottom = '1rem'
-    } else {
-      const errorMessageElement = document.getElementById('error-message')
-      errorMessageElement.style.display = 'hidden'
-    }
-  })
-
   return (
     <>
       {info && (
@@ -41,10 +23,6 @@ function Slider({ info }) {
           </Swiper>
         </DivSlider>
       )}
-      <p id="error-message">
-        O slider de Filmes não estar carregado. Por favor, tente novamente mais
-        tarde.
-      </p>
     </>
   )
 }

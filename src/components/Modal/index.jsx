@@ -8,14 +8,6 @@ function Modal({ movieId, setShowModal }) {
   useEffect(() => {
     async function getMovie() {
       setMovie(await getMovieModal(movieId))
-
-      if (movie === undefined) {
-        const errorMessageElement = document.getElementById('error-message')
-        errorMessageElement.style.display = 'flex'
-      } else {
-        const errorMessageElement = document.getElementById('error-message')
-        errorMessageElement.style.display = 'hidden'
-      }
     }
     getMovie()
   })
@@ -33,9 +25,6 @@ function Modal({ movieId, setShowModal }) {
           ></iframe>
         </Container>
       )}
-      <p id="error-message">
-        O modal não estar carregando. Por favor, tente novamente mais tarde.
-      </p>
     </Background>
   )
 }

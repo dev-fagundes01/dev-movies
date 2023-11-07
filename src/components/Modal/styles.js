@@ -9,11 +9,6 @@ export const Background = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-
-  #error-message {
-    font-size: 4rem;
-    color: wheat;
-  }
 `
 
 export const Container = styled.div`
