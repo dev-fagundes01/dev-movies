@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+/* eslint-disable prettier/prettier */
+import styled from "styled-components";
 
 export const Background = styled.div`
   width: 100vw;
@@ -9,7 +10,7 @@ export const Background = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-`
+`;
 
 export const Container = styled.div`
   background: #000;
@@ -20,10 +21,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   p {
-    font-size: 70px;
-    margin-bottom: 30px;
+    font-size: 150%;
     margin-left: 95%;
-    color: wheat;
     cursor: pointer;
   }
 
@@ -32,4 +31,4 @@ export const Container = styled.div`
     height: 80%;
     width: 90%;
   }
-`
+`;
