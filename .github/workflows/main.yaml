@@ -8,7 +8,7 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     env:
-      CI: true
+      ACTIONS_STEP_DEBUG: true
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
