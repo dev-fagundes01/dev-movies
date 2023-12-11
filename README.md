@@ -3,7 +3,7 @@ Link do projeto: https://dev-movies-df.netlify.app
 <br>
 <h2>Tenologias ultilizadas:</h2>
 <p>- HTML<p>
-<p>- CSS</p>
+<p>- Styled-Components<p>
 <p>- JavaScript</p>
 <p>- React</p>
 <h2> Autor </h2>
