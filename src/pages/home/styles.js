@@ -34,14 +34,23 @@ export const DivInfo = styled.div`
   align-items: center;
   flex-direction: column;
   h1 {
-    font-size: 5rem;
+    font-size: 2.5rem;
     color: white;
   }
   p {
-    font-size: 2rem;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: 2s linear;
     color: white;
+
+    &:hover {
+      background: black;
+      padding: 10px;
+      border-radius: 10px;
+      opacity: 0.8;
+      transition: 2s linear;
+    }
   }
 `
 export const DivButton = styled.div`
@@ -53,6 +62,6 @@ export const DivPoster = styled.div`
   z-index: 2;
   img {
     border-radius: 50px;
-    height: 60rem;
+    height: 70vh;
   }
 `

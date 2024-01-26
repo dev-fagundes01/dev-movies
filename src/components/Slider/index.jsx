@@ -10,8 +10,8 @@ function Slider({ info, title }) {
         <h2>{title}</h2>
         <Swiper
           grabCursor
-          spaceBetween={10}
-          sliderperview={'auto'}
+          spaceBetween={5}
+          sliderperview={5}
           className="swiper"
         >
           {info.map((item, index) => (

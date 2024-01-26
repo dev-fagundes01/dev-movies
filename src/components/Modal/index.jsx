@@ -1,16 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import { getMovieModal } from '../../services/getData'
-import { Background, Container } from './styles'
+import { getMovieModal } from "../../services/getData";
+import { Background, Container } from "./styles";
 
 function Modal({ movieId, setShowModal }) {
-  const [movie, setMovie] = useState()
+
+  const [movie, setMovie] = useState();
   useEffect(() => {
     async function getMovie() {
-      setMovie(await getMovieModal(movieId))
+      console.log(movieId);
+      setMovie(await getMovieModal(movieId));
     }
-    getMovie()
-  })
+    getMovie();
+  }, []);
+
+  useEffect(() => {}, [movie]);
+  console.log(movie);
 
   return (
     <Background onClick={() => setShowModal(false)}>
@@ -26,7 +31,7 @@ function Modal({ movieId, setShowModal }) {
         </Container>
       )}
     </Background>
-  )
+  );
 }
 
-export default Modal
+export default Modal;

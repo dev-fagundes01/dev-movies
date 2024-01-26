@@ -59,15 +59,15 @@ export const Cover = styled.div`
 `
 export const DivInfo = styled.div`
   z-index: 2;
-  width: 50vw;
+  width: 65vw;
   h1 {
-    font-size: 7rem;
+    font-size: 4rem;
     color: white;
     display: flex;
     justify-content: center;
   }
   p {
-    font-size: 2.8rem;
+    font-size: 1.5rem;
     color: white;
   }
 `
@@ -80,12 +80,13 @@ export const DivVideos = styled.div`
     width: 100%;
   }
   h4 {
-    font-size: 100px;
+    font-size: 2.5rem;
     margin-right: 35%;
     margin-top: 50px;
     color: white;
   }
   iframe {
     border: none;
+    height: 60vh;
   }
 `

@@ -12,7 +12,7 @@ export const DivHeader = styled.div`
   transition: background-color 1s ease-in-out;
 
   img {
-    width: 30%;
+    height: 3rem;
     margin: 15px 30px;
   }
 `
@@ -20,14 +20,13 @@ export const Menu = styled.ul`
   list-style: none;
   display: flex;
   gap: 30px;
-  margin-top: 45px;
+  margin-top: 20px;
   margin-right: 4%;
 `
 export const Li = styled.li`
   font-weight: 600;
-  font-size: 50px;
+  font-size: 1.3rem;
   position: relative;
-  height: 70px;
   cursor: pointer;
   a {
     color: white;
@@ -40,7 +39,7 @@ export const Li = styled.li`
     width: ${(props) => (props.isActive ? '100%' : 0)};
     background: green;
     position: absolute;
-    bottom: -10px;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
     transition: width 0.5s ease-in-out;
