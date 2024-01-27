@@ -1,21 +1,19 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-
-import Card from './Card'
-import { DivSlider } from './styles'
+import Card from "./Card";
+import { DivSlider, H2 } from "./styles";
 
 function Slider({ info, title }) {
   return (
-    <DivSlider>
-      <h2>{title}</h2>
-      <Swiper spaceBetween={5} sliderperview={5} className="swiper">
-        {info.map((item, index) => (
-          <SwiperSlide key={index}>
+    <>
+      <H2>{title}</H2>
+      <DivSlider>
+        {info.slice(0, 10).map((item, index) => (
+          <div key={index}>
             <Card item={item} />
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
-    </DivSlider>
-  )
+      </DivSlider>
+    </>
+  );
 }
 
-export default Slider
+export default Slider;

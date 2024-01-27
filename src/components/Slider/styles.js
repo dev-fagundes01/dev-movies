@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
-export const DivSlider = styled.div`
-  position: relative;
-  h2 {
-    color: white;
-    font-size: 1rem;
-    margin: 10px 15px;
-  }
+export const H2 = styled.h2`
+  color: white;
+  font-size: 1rem;
+  margin: 10px 15px;
+  margin-left: 20px;
+`;
 
-  .swiper-wrapper {
-    display: flex;
-    overflow-x: scroll;
+export const DivSlider = styled.div`
+  display: flex;
+  overflow-x: scroll;
+
+  div {
     padding-left: 10px;
   }
 `;
