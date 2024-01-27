@@ -6,7 +6,7 @@ function Slider({ info, title }) {
     <>
       <H2>{title}</H2>
       <DivSlider>
-        {info.slice(0, 10).map((item, index) => (
+        {info.slice(0, 30).map((item, index) => (
           <div key={index}>
             <Card item={item} />
           </div>
