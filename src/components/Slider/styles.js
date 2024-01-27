@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const DivSlider = styled.div`
   position: relative;
@@ -13,4 +13,4 @@ export const DivSlider = styled.div`
     overflow-x: scroll;
     padding-left: 10px;
   }
-`
+`;
