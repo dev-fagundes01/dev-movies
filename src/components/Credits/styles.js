@@ -1,15 +1,16 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Title = styled.h3`
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin: 20px;
   color: white;
-`
+`;
 export const Container = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 5px;
   overflow-x: scroll;
-`
+  width: 100%;
+`;
 
 export const DivCredits = styled.div`
   img {
@@ -19,4 +20,4 @@ export const DivCredits = styled.div`
     font-size: 1rem;
     color: white;
   }
-`
+`;

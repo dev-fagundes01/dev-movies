@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components";
 
 const scale = keyframes`
 from{
@@ -7,7 +7,7 @@ from{
 to{
   transform: scale(1)
 }
-`
+`;
 
 export const DivBackground = styled.div`
   background-image: url(${(props) => props.image});
@@ -17,7 +17,7 @@ export const DivBackground = styled.div`
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -26,7 +26,7 @@ export const DivBackground = styled.div`
     background-color: rgba(0, 0, 0, 0.5);
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -34,7 +34,7 @@ export const DivBackground = styled.div`
     height: 200px;
     background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0));
   }
-`
+`;
 export const DivDetail = styled.div`
   display: flex;
   height: 100%;
@@ -42,7 +42,7 @@ export const DivDetail = styled.div`
   margin-top: -280px;
   margin-bottom: 50px;
   gap: 35px;
-`
+`;
 export const Cover = styled.div`
   margin: 20px;
   display: flex;
@@ -56,12 +56,12 @@ export const Cover = styled.div`
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
     animation: ${scale} 0.5s linear;
   }
-`
+`;
 export const DivInfo = styled.div`
   z-index: 2;
-  width: 65vw;
+  width: 60vw;
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     display: flex;
     justify-content: center;
@@ -70,23 +70,23 @@ export const DivInfo = styled.div`
     font-size: 1.5rem;
     color: white;
   }
-`
+`;
 export const DivVideos = styled.div`
   div {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 20px;
     width: 100%;
   }
   h4 {
-    font-size: 2.5rem;
-    margin-right: 35%;
-    margin-top: 50px;
+    font-size: 2rem;
+    text-align: center;
     color: white;
   }
   iframe {
     border: none;
     height: 60vh;
   }
-`
+`;
