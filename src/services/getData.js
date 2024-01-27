@@ -5,7 +5,7 @@ export async function getMovie() {
     data: { results }
   } = await api.get('/movie/popular')
 
-  return results[2]
+  return results[0]
 }
 
 export async function getTopMovies() {
@@ -44,6 +44,22 @@ export async function getSeriesUpcoming() {
   const {
     data: { results }
   } = await api.get('/tv/on_the_air')
+
+  return results
+}
+
+export async function getMovieLatest() {
+  const {
+    data: { results }
+  } = await api.get('/movie/now_playing')
+
+  return results
+}
+
+export async function getSeriesAiringToday() {
+  const {
+    data: { results }
+  } = await api.get('/tv/airing_today')
 
   return results
 }

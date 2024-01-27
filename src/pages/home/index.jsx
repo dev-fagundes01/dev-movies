@@ -6,8 +6,6 @@ import Modal from '../../components/Modal'
 import Slider from '../../components/Slider'
 import {
   getMovie,
-  getMovieUpcoming,
-  getSeriesUpcoming,
   getTopMovies,
   getTopPerson,
   getTopSeries
@@ -27,8 +25,6 @@ function Home() {
   const [topMovies, setTopMovies] = useState()
   const [topSeries, setTopSeries] = useState()
   const [topPerson, setTopPerson] = useState()
-  const [moviesUpcoming, setMovieUpcoming] = useState()
-  const [seriesUpcoming, setSeriesUpcoming] = useState()
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -37,24 +33,18 @@ function Home() {
         getMovie(),
         getTopMovies(),
         getTopSeries(),
-        getTopPerson(),
-        getMovieUpcoming(),
-        getSeriesUpcoming()
+        getTopPerson()
       ]).then(
         ([
           Movie,
           TopMovie,
           TopSeries,
-          TopPerson,
-          MovieUpcoming,
-          SeriesUpcoming
+          TopPerson
         ]) => {
           setMovie(Movie)
           setTopMovies(TopMovie)
           setTopSeries(TopSeries)
           setTopPerson(TopPerson)
-          setMovieUpcoming(MovieUpcoming)
-          setSeriesUpcoming(SeriesUpcoming)
         }
       )
     }
@@ -97,12 +87,6 @@ function Home() {
       {topMovies && <Slider info={topMovies} title={'Top Filmes'}></Slider>}
       {topSeries && <Slider info={topSeries} title={'Top Séries'}></Slider>}
       {topPerson && <Slider info={topPerson} title={'Top Artistas'}></Slider>}
-      {moviesUpcoming && (
-        <Slider info={moviesUpcoming} title={'Próximos Filmes'}></Slider>
-      )}
-      {seriesUpcoming && (
-        <Slider info={seriesUpcoming} title={'Próximas Séries'}></Slider>
-      )}
     </>
   )
 }

@@ -9,7 +9,6 @@ function Slider({ info, title }) {
       <DivSlider>
         <h2>{title}</h2>
         <Swiper
-          grabCursor
           spaceBetween={5}
           sliderperview={5}
           className="swiper"

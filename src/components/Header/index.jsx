@@ -24,8 +24,8 @@ function Header() {
         <Li isActive={pathname === "/"}>
           <Link to="/">Home</Link>
         </Li>
-        <Li isActive={pathname.includes("filmes")}>
-          <Link to="/filmes">Filmes</Link>
+        <Li isActive={pathname.includes("movies")}>
+          <Link to="/movies">Filmes</Link>
         </Li>
         <Li isActive={pathname.includes("series")}>
           <Link to="/series">Séries</Link>
