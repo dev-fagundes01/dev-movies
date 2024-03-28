@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const buttonStyles = css`
-  box-shadow: 0px -4px 18px 30px rgba(17, 17, 26, 0.18);
+  box-shadow: 0px -1px 6px 6px rgb(226 226 235 / 18%);
   height: 40px;
   width: 180px;
   border-radius: 40px;
