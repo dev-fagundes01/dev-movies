@@ -22,6 +22,7 @@ export const Container = styled.div`
   p {
     font-size: 150%;
     margin-left: 95%;
+    color: white;
     cursor: pointer;
   }
 
